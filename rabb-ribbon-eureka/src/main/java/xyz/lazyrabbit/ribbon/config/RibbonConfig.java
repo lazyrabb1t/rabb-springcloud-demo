@@ -1,6 +1,6 @@
 package xyz.lazyrabbit.ribbon.config;
 
-import com.netflix.loadbalancer.RandomRule;
+import com.netflix.loadbalancer.IRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +11,7 @@ public class RibbonConfig {
 
     /**
      * 使用@LoadBalanced开启ribbon负载均衡功能
+     *
      * @return
      */
     @Bean
@@ -21,10 +22,11 @@ public class RibbonConfig {
 
     /**
      * 负载均衡策略
+     *
      * @return
      */
     @Bean
-    public RandomRule createRule() {
-        return new RandomRule();
+    public IRule loadBalancerRule() {
+        return new MyRule();
     }
 }
