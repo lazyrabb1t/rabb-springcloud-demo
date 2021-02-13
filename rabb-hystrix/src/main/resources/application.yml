@@ -1,0 +1,12 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: rabb-hystrix
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10002/eureka/
+rabb:
+  service:
+    test: http://RABB-EUREKA-PROVIDER
