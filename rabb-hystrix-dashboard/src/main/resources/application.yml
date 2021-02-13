@@ -1,0 +1,12 @@
+server:
+  port: 13000
+spring:
+  application:
+    name: rabb-hystrix-dashboard
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10002/eureka/
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*" # ·ÅÐÐhost

@@ -10,3 +10,8 @@ eureka:
 rabb:
   service:
     test: http://RABB-EUREKA-PROVIDER
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream' #暴露hystrix监控端点
