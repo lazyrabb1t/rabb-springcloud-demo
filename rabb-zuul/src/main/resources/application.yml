@@ -1,0 +1,18 @@
+server:
+  port: 15000
+spring:
+  application:
+    name: rabb-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10002/eureka/
+zuul:
+  routes: #给服务配置路由
+    rabb-eureka-provider:
+      path: /provider/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'routes'
