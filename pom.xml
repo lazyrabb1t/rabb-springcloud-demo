@@ -26,6 +26,9 @@
         <module>rabb-hystrix</module>
         <module>rabb-hystrix-dashboard</module>
         <module>rabb-openfeign</module>
+        <module>rabb-zuul</module>
+        <module>rabb-config-server</module>
+        <module>rabb-config-client</module>
     </modules>
     <dependencyManagement>
         <dependencies>
