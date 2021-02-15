@@ -1,0 +1,17 @@
+server:
+  port: 16000
+spring:
+  application:
+    name: rabb-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lazyrabb1t/test-springcloud-config.git
+#          username: username@xx.xx
+#          password: xxxxxx
+          clone-on-start: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10002/eureka/

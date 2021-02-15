@@ -1,0 +1,18 @@
+server:
+  port: 17000
+spring:
+  application:
+    name: rabb-config-client
+  cloud:
+    config:
+#      uri: http://localhost:16000
+      profile: dev
+      label: master
+      name: rabb
+      discovery:
+        enabled: true
+        service-id: RABB-CONFIG-SERVER
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10002/eureka/
