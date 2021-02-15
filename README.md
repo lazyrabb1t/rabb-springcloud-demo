@@ -2,9 +2,9 @@
 
 用于学习SpringCloud的仓库，相关文章见：https://blog.lazyrabbit.xyz/tags/#SpringCloud
 
-### 版本情况
+#### 版本
 
-组件 | SpringBoot | Spring Cloud
+组件 | SpringBoot | SpringCloud
 ---|---|---
 Eureka | 2.4.2 | 2020.0.1(Ilford)
 Ribbon | 2.3.8.RELEASE | Hoxton.SR10
