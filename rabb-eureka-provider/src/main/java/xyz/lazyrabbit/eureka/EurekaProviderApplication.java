@@ -21,6 +21,7 @@ public class EurekaProviderApplication {
 
     @GetMapping
     public String hello() {
+        log.info("调用提供者hello接口");
         return "Hello SpringCloud! from port:" + port;
     }
 }

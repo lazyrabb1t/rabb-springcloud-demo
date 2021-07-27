@@ -1,5 +1,6 @@
 package xyz.lazyrabbit.eureka;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @RestController
 @EnableEurekaClient
+@Slf4j
 public class EurekaConsumerApplication {
 
     @Autowired
@@ -30,7 +32,9 @@ public class EurekaConsumerApplication {
 
     @GetMapping
     public String hello() {
+        log.info("调用消费者hello接口");
 //        return "INVOKE PROVIDER HELLO METHOD：" + restTemplate.getForEntity("http://localhost:10000", String.class).getBody();
+        restTemplate.getForEntity("http://RABB-EUREKA-PROVIDER", String.class).getBody();
         return "INVOKE PROVIDER HELLO METHOD：" + restTemplate.getForEntity("http://RABB-EUREKA-PROVIDER", String.class).getBody();
     }
 
