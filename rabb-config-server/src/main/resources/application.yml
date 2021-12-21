@@ -7,10 +7,20 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/lazyrabb1t/test-springcloud-config.git
+          uri: https://gitee.com/lazyrabb1t/test-springcloud-config.git
 #          username: username@xx.xx
 #          password: xxxxxx
           clone-on-start: true
+          timeout: 50
+          force-pull: true
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+# 下面这段配置允许我们使用 actuator/bus-refresh 的post请求来触发config server refresh的请求。
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'busrefresh'
 eureka:
   client:
     service-url:

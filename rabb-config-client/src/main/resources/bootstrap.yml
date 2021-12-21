@@ -12,6 +12,13 @@ spring:
       discovery:
         enabled: true
         service-id: RABB-CONFIG-SERVER
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'
 eureka:
   client:
     service-url:
