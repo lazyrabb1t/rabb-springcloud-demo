@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        source1-out-0:
+          destination: topic1
+          group: group1
+        source2-out-0:
+          destination: topic2
+          group: group2
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9092
+#    function:
+#      definition: source1;source2
+server:
+  port: 18000

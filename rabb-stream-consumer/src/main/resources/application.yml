@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        # 方法名称-in-索引，索引值为参数个数
+        sink1-in-0:
+          # 指定topic名称
+          destination: topic1
+          # 指定group
+          group: group1
+        sink2-in-0:
+          destination: topic2
+          group: group2
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9092
+    # 定义函数
+    function:
+      definition: sink1;sink2
+server:
+  port: 18001
