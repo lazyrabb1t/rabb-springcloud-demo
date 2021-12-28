@@ -31,6 +31,8 @@
         <module>rabb-config-client</module>
         <module>rabb-stream-provider</module>
         <module>rabb-stream-consumer</module>
+        <module>rabb-consul-provider</module>
+        <module>rabb-consul-consumer</module>
     </modules>
     <dependencyManagement>
         <dependencies>
