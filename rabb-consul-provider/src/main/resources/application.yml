@@ -1,0 +1,11 @@
+server:
+  port: 19000
+spring:
+  application:
+    name: rabb-consul-provider
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}

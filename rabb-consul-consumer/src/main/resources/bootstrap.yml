@@ -1,0 +1,34 @@
+server:
+  port: 19001
+spring:
+  profiles:
+    active: dev
+  application:
+    name: rabb-consul-consumer
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+      config:
+        # 开启配置中心功能，默认开启
+#        enabled: true
+        # 开启配置变更监控，默认开启
+#        watch:
+#          enabled: true
+        # 按照以下配置，会从consul中读取键名为config/rabb-consul-consumer,dev/data的数据
+        # 设置配置值的根文件夹
+        prefixes: config
+        # 配置文件夹名称
+        default-context: ${spring.application.name}
+        # 配置文件格式
+        format: YAML
+        # 环境的分隔符，默认英文逗号
+#        profile-separator: '::'
+        # 配置数据的key，默认data
+        data-key: data
+  main:
+    allow-circular-references: true
+service-url:
+  provider: http://rabb-consul-provider`
