@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    # 设置Nacos服务端配置
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      # Nacos 配置中心的namespace。需要注意，如果使用 public 的 namcespace ，请不要填写这个值，直接留空即可
+      config:
+        namespace:
+        file-extension: yml

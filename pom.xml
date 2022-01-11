@@ -33,6 +33,8 @@
         <module>rabb-stream-consumer</module>
         <module>rabb-consul-provider</module>
         <module>rabb-consul-consumer</module>
+        <module>rabb-nacos-provider</module>
+        <module>rabb-nacos-consumer</module>
     </modules>
     <dependencyManagement>
         <dependencies>
