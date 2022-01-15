@@ -1,0 +1,12 @@
+server:
+  port: 20101
+spring:
+  config:
+    import: 'optional:zookeeper:'
+  application:
+    name: rabb-zookeeper-consumer
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+service-url:
+  provider: http://rabb-zookeeper-provider

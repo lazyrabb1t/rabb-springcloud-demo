@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: rabb-zookeeper-provider
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+server:
+  port: 20100
