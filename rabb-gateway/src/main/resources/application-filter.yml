@@ -1,0 +1,47 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: rabb_blog_route
+          uri: https://blog.lazyrabbit.xyz
+          filters:
+            - Time
+          predicates:
+            - Query=blog
+        - id: rabb_route
+          uri: https://www.lazyrabbit.xyz
+          filters:
+            - AddRequestHeader=X-Request-red, blue
+          predicates:
+            - Method=GET
+#        - id: add_request_header_route
+#          uri: https://www.lazyrabbit.xyz
+#          filters:
+#            - AddRequestHeader=X-Request-red, blue
+#          predicates:
+#            - Method=GET
+#        - id: add_request_parameter_route
+#          uri: https://www.lazyrabbit.xyz
+#          filters:
+#            - AddRequestParameter=red, blue
+#        - id: add_response_header_route
+#          uri: https://www.lazyrabbit.xyz
+#          filters:
+#            - AddResponseHeader=X-Response-Red, Blue
+#        - id: requestratelimiter_route
+#          uri: http://localhost:10000/
+#          filters:
+#            - name: RequestRateLimiter
+#              args:
+#                redis-rate-limiter.replenishRate: 10
+#                redis-rate-limiter.burstCapacity: 20
+#                redis-rate-limiter.requestedTokens: 10
+#                key-resolver: "#{@userKeyResolver}"
+#          predicates:
+#            - Method=GET
+#        - id: prefixpath_route
+#          uri: https://example.org
+#          filters:
+#            - RedirectTo=302, https://www.lazyrabbit.xyz
+#          predicates:
+#            - Method=GET

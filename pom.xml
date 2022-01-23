@@ -37,6 +37,7 @@
         <module>rabb-nacos-consumer</module>
         <module>rabb-zookeeper-consumer</module>
         <module>rabb-zookeeper-provider</module>
+        <module>rabb-gateway</module>
     </modules>
     <dependencyManagement>
         <dependencies>

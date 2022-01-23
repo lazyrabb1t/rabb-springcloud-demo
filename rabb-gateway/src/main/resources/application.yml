@@ -1,0 +1,10 @@
+server:
+  port: 20200
+spring:
+  application:
+    name: rabb-gateway
+  profiles:
+    active: eureka
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE

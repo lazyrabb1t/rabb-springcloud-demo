@@ -1,0 +1,52 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: after_route
+          uri: https://www.lazyrabbit.xyz
+          predicates:
+            - After=2017-01-20T17:42:47.789-07:00[America/Denver]
+        - id: before_route
+          uri: https://www.lazyrabbit.xyz
+          predicates:
+            - Before=2017-01-20T17:42:47.789-07:00[America/Denver]
+        - id: between_route
+          uri: https://www.lazyrabbit.xyz
+          predicates:
+            - Between=2017-01-20T17:42:47.789-07:00[America/Denver], 2017-01-21T17:42:47.789-07:00[America/Denver]
+        - id: cookie_route
+          uri: https://www.lazyrabbit.xyz
+          predicates:
+            - Cookie=chocolate, ch.p
+        - id: header_route
+          uri: https://www.lazyrabbit.xyz
+          predicates:
+            - Header=X-Request-Id, \d+
+        - id: host_route
+          uri: https://www.lazyrabbit.xyz
+          predicates:
+            - Host=**.somehost.org,**.anotherhost.org
+        - id: method_route
+          uri: https://www.lazyrabbit.xyz
+          predicates:
+            - Method=GET,POST
+        - id: path_route
+          uri: https://www.lazyrabbit.xyz
+          predicates:
+            - Path=/red/{segment},/blue/{segment}
+        - id: query_route
+          uri: https://www.lazyrabbit.xyz
+          predicates:
+            - Query=green
+        - id: remoteaddr_route
+          uri: https://www.lazyrabbit.xyz
+          predicates:
+            - RemoteAddr=192.168.1.1/24
+        - id: weight_high
+          uri: https://blog.lazyrabbit.xyz
+          predicates:
+            - Weight=group1, 8
+        - id: weight_low
+          uri: https://img.lazyrabbit.xyz
+          predicates:
+            - Weight=group1, 2

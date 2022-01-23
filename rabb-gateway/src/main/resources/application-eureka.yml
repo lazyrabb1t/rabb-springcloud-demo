@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: prefixpath_route
+          uri: lb://rabb-eureka-provider #此处需要使用lb协议
+          predicates:
+            - Path=/filter/**
+          filters:
+            - RewritePath=/filter/?(?<segment>.*), /$\{segment}
+            - Time
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能
+          lower-case-service-id: true #使用小写服务名，默认是大写
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10002/eureka
