@@ -38,6 +38,7 @@
         <module>rabb-zookeeper-consumer</module>
         <module>rabb-zookeeper-provider</module>
         <module>rabb-gateway</module>
+        <module>rabb-sentinel</module>
     </modules>
     <dependencyManagement>
         <dependencies>
