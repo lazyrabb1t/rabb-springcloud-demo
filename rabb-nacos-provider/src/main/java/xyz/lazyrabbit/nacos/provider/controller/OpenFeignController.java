@@ -32,6 +32,12 @@ public class OpenFeignController {
     public Response delete(@PathVariable Integer id) {
         return ResponseUtils.success("delete:" + id);
     }
+
+    @GetMapping("/test/{id}")
+    public Response test(@PathVariable Integer id) {
+        return ResponseUtils.success(new User(id, "test_lazyrabbit_get_port_" + port));
+    }
+
 }
 
 

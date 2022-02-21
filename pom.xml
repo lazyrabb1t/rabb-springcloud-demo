@@ -39,6 +39,7 @@
         <module>rabb-zookeeper-provider</module>
         <module>rabb-gateway</module>
         <module>rabb-sentinel</module>
+        <module>rabb-gateway-nacos-sentinel</module>
     </modules>
     <dependencyManagement>
         <dependencies>

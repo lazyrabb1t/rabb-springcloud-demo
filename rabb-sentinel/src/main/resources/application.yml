@@ -16,7 +16,7 @@ spring:
         ds:
           nacos:
             server-addr: 127.0.0.1:8848
-            data-id: rabb-sentinel-rule.json
+            data-id: rabb-sentinel-rule
             group-id: DEFAULT_GROUP
             username: nacos
             password: nacos
