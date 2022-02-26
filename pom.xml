@@ -40,6 +40,7 @@
         <module>rabb-gateway</module>
         <module>rabb-sentinel</module>
         <module>rabb-gateway-nacos-sentinel</module>
+        <module>rabb-seata</module>
     </modules>
     <dependencyManagement>
         <dependencies>

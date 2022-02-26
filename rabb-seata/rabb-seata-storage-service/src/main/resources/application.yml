@@ -1,0 +1,5 @@
+server:
+  port: 20502
+spring:
+  application:
+    name: rabb-seata-storage-service

@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    # 设置Nacos服务端配置
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
