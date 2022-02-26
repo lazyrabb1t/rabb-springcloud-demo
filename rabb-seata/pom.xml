@@ -46,6 +46,30 @@
                 <artifactId>rabb-common</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+            <!--mybatisPlus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.5.1</version>
+            </dependency>
+            <!--mybatis-plus代码生成器-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>3.5.1</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.baomidou</groupId>
+                        <artifactId>mybatis-plus</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- 引入druid连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.2.6</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

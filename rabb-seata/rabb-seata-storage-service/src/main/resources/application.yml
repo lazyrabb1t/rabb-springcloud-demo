@@ -3,3 +3,17 @@ server:
 spring:
   application:
     name: rabb-seata-storage-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/seata_storage?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: 123456
+mybatis-plus:
+  # xml文件位置
+  mapper-locations:
+    - classpath:mapper/*.xml
+  # 实体类位置
+  type-aliases-package: xyz.lazyrabbit.seata.storage.entity
+  # 打印sql日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

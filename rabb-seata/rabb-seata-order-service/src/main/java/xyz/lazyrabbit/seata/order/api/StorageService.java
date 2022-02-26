@@ -9,7 +9,7 @@ import xyz.lazyrabbit.common.util.ResponseUtils;
 @FeignClient(value = "${rabb.service.storage-service}", fallbackFactory = StorageFallbackFactoryService.class)
 public interface StorageService {
 
-    @GetMapping("/storage/{id}")
+    @GetMapping("/storage/sku/{id}")
     Response manage(@PathVariable(value = "id") Integer id, @RequestParam(value = "count") Integer count);
 
 }
