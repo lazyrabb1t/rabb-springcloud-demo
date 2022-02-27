@@ -17,3 +17,35 @@ mybatis-plus:
   # 打印sql日志
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  # 客户端和服务端在同一个事务组，其值与nacos配置中心中service.vgroupMapping对应
+  tx-service-group: default_tx_group
+  # 自动数据源代理
+  enable-auto-data-source-proxy: true
+  # 数据源代理模式(分布式事务方案)
+  data-source-proxy-mode: AT
+  # 事务群组,配置项值为TC集群名,需要与服务端保持一致，，其值与nacos配置中心中service.vgroupMapping对应
+  service:
+    vgroup-mapping:
+      default_tx_group: default
+  #整合nacos配置中心
+  config:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      #      namespace: 24712b7c-05ad-4b79-af97-1d202431f521
+      data-id: seataServer.properties
+  #整合nacos注册中心
+  registry:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      #      namespace: 24712b7c-05ad-4b79-af97-1d202431f521
+      # 默认TC集群名
+      cluster: default
+      # 服务名,与服务端中registry.conf配置要一致
+      application: seata-server

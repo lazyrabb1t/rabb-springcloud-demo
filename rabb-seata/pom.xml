@@ -16,6 +16,8 @@
         <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
         <spring-cloud-alibaba.version>2.2.7.RELEASE</spring-cloud-alibaba.version>
         <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+        <seata.version>1.4.2</seata.version>
+        <mybatis-plus.version>3.5.1</mybatis-plus.version>
     </properties>
 
     <dependencyManagement>
@@ -50,13 +52,13 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>3.5.1</version>
+                <version>${mybatis-plus.version}</version>
             </dependency>
             <!--mybatis-plus代码生成器-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-generator</artifactId>
-                <version>3.5.1</version>
+                <version>${mybatis-plus.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>com.baomidou</groupId>
@@ -69,6 +71,16 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>1.2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.28</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -22,8 +22,8 @@ class SeataStorageServiceApplicationTests {
         Sku sku = new Sku();
         sku.setSkuName("奥迪");
         sku.setCount(999);
-        sku.setCreateTime(LocalDateTime.now());
-        sku.setUpdateTime(LocalDateTime.now());
+//        sku.setCreateTime(LocalDateTime.now());
+//        sku.setUpdateTime(LocalDateTime.now());
         skuService.saveOrUpdate(sku);
         List<Sku> list = skuService.list();
         log.info("list:{}", list);

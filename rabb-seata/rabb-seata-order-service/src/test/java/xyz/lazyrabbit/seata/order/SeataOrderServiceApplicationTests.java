@@ -23,7 +23,7 @@ class SeataOrderServiceApplicationTests {
         Order order = new Order();
         order.setOrderName("订单A");
         order.setSkuId(13);
-        order.setCreateTime(LocalDateTime.now());
+//        order.setCreateTime(LocalDateTime.now());
         orderService.saveOrUpdate(order);
         List<Order> list = orderService.list();
         log.info("list:{}", list);
